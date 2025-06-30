@@ -25,7 +25,7 @@ const Header = () => {
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
               <circle cx="16" cy="16" r="16" fill="url(#paint0_linear)" />
               <defs>
-                <linearGradient
+                <linearGradient 
                   id="paint0_linear"
                   x1="0"
                   y1="0"

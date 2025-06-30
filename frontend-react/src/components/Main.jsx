@@ -66,7 +66,7 @@ const Main = () => {
             <Button
               text="Start Investing Smart"
               styler="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-medium"
-            />
+            /> 
             <Button
               text="See How It Works"
               styler="border border-gray-300 hover:bg-gray-100 px-8 py-3 rounded-full font-medium"

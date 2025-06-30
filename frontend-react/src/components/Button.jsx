@@ -11,7 +11,7 @@ const Button = ({text, styler}) => {
             >
                 {text}
             </a>
-        </>
+        </> 
     )
 }
 
