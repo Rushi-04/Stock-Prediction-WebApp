@@ -18,7 +18,7 @@ const Header = () => {
           <motion.div
             className="w-8 h-8 mr-6"
             initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
+            animate={{ scale: 1 }}  
             whileHover={{ rotate: 10 }}
             transition={{ duration: 0.3 }}
           >
