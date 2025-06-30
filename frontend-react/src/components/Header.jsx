@@ -69,9 +69,9 @@ const Header = () => {
           transition={{ duration: 0.3, delay: 0.2 }}
           whileHover={{ scale: 1.05 }}
         >
-            <Button text='Login' styler='inline-flex items-center justify-center m-1 px-5 py-2 text-sm font-medium text-white bg-black rounded-full hover:bg-white hover:text-black hover:border border-gray-300 transition-colors' />
+            <Button text='Login' styler='inline-flex items-center justify-center m-1 px-5 py-2 text-sm font-medium text-white bg-black rounded-full hover:bg-white hover:text-black hover:border border-gray-300 transition-colors' url='/login' />
 
-            <Button text='Register' styler='inline-flex items-center justify-center m-1 px-5 py-2 text-sm font-medium text-black bg-white border border-gray-300 rounded-full hover:bg-gray-800 hover:text-white transition-colors' />
+            <Button text='Register' styler='inline-flex items-center justify-center m-1 px-5 py-2 text-sm font-medium text-black bg-white border border-gray-300 rounded-full hover:bg-gray-800 hover:text-white transition-colors' url='/register' />
           
         </motion.div>
 
@@ -132,9 +132,9 @@ const Header = () => {
                 exit={{ opacity: 0, y: 20 }}
                 className="pt-6"
               >
-                <Button text='Login' styler='inline-flex items-center justify-center m-1 px-5 py-2 text-sm font-medium text-white bg-black rounded-full hover:bg-gray-800 transition-colors' />
+                <Button text='Login' styler='inline-flex items-center justify-center m-1 px-5 py-2 text-sm font-medium text-white bg-black rounded-full hover:bg-gray-800 transition-colors' url='/login'/>
             
-            <Button text='Register' styler='inline-flex items-center justify-center m-1 px-5 py-2 text-sm font-medium text-black bg-white border border-gray-300 rounded-full hover:bg-gray-800 hover:text-white transition-colors' />
+            <Button text='Register' styler='inline-flex items-center justify-center m-1 px-5 py-2 text-sm font-medium text-black bg-white border border-gray-300 rounded-full hover:bg-gray-800 hover:text-white transition-colors' url='/register' />
               </motion.div>
             </div>
           </motion.div>
