@@ -13,6 +13,7 @@ const Register = () => {
     const [errors, setErrors] = useState({})
     const [success, setSuccess] = useState(false)
     const [loading, setLoading] = useState(false)
+    const [backenderror, setBackenderror] = useState(false)
     
 
 
@@ -31,7 +32,9 @@ const Register = () => {
             setPassword('')
             setErrors({})
             setSuccess(true)
+            setBackenderror(false)
         }catch(error){
+            setBackenderror(true)
             console.error("Error", error.response.data)
             setErrors(error.response.data)
         }finally{
@@ -126,7 +129,8 @@ const Register = () => {
               </div>
                 <small className='text-center text-sm'>{errors.password && <div className='text-red-600'> {errors.password} </div> }</small>
             </div>
-            {success && <div className='bg-green-300 text-green-950 p-2 rounded-xl text-center' >Registration Successfull 🎉 </div>}
+            {backenderror && <div className='bg-red-600 text-white text-md p-2 rounded-2xl text-center ' >Registration Failed Some Error Occured !</div> }
+            {success && <div className='bg-green-300 text-green-950 p-2 rounded-xl text-center' >Registration Successfull ! </div>}
             
             {loading ? 
                 (<button
