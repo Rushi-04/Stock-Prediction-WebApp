@@ -4,23 +4,43 @@ import Button from './Button';
 import { Sparkles, UserPlus, Mail, Lock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../context/AuthProvider';
 
 const Login = () => {
 
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
-  const [errors, setErrors] = useState({})
+  const [error, setError] = useState('')
   const [success, setSuccess] = useState(false)
   const [loading, setLoading] = useState(false)
-  const [backenderror, setBackenderror] = useState(false)
-
+  const Navigate = useNavigate()
+  const {isLoggedIn, setIsLoggedIn} = useContext(AuthContext)
 
 
   const handleLogin = async (e) => {
     e.preventDefault()
     setLoading(true)
     const userData = { username, password }
-    console.log('UserData==>', userData);
+    // console.log('UserData==>', userData)
+
+    try{
+      const response = await axios.post('http://127.0.0.1:8000/api/v1/token/', userData)
+      // console.log(response.data)
+      localStorage.setItem('accessToken', response.data.access)
+      localStorage.setItem('refreshToken', response.data.refresh)
+      setSuccess(true)
+      setError('')
+      Navigate('/dashboard')
+      setIsLoggedIn(true)
+      console.log("Login Successfull !")
+    }catch(error){
+      setError("Invalid Credentials")
+      console.error("Invalid Credentials")
+    }finally{
+      setLoading(false)
+    }
 
   }
 
@@ -73,7 +93,6 @@ const Login = () => {
                   onChange={(e) => setUsername(e.target.value)}
                 />
               </div>
-              <small className='text-center text-sm'>{errors.username && <div className='text-red-600'> {errors.username} </div>}</small>
             </div>
 
 
@@ -92,9 +111,8 @@ const Login = () => {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
-              <small className='text-center text-sm'>{errors.password && <div className='text-red-600'> {errors.password} </div>}</small>
             </div>
-            {backenderror && <div className='bg-red-600 text-white text-md p-2 rounded-2xl text-center ' >Login Failed Some Error Occured !</div>}
+            {error && <div className='bg-red-600 text-white text-md p-2 rounded-2xl text-center '>{error}</div>}
             {success && <div className='bg-green-300 text-green-950 p-2 rounded-xl text-center' >Login Successfull ! </div>}
 
             {loading ?

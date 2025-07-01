@@ -13,6 +13,7 @@ const scrollVariant = {
 }
 
 const Main = () => {
+
   return (
     <div className="relative bg-white overflow-hidden">
       {/* Light/Dark toggle - place somewhere else in App ideally */}
@@ -68,8 +69,9 @@ const Main = () => {
               styler="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-medium"
             /> 
             <Button
-              text="See How It Works"
+              text="Go to Dashboard"
               styler="border border-gray-300 hover:bg-gray-100 px-8 py-3 rounded-full font-medium"
+              url='/dashboard'
             />
           </motion.div>
         </div>
