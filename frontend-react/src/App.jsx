@@ -15,7 +15,7 @@ function AppLayout() {
     const location = useLocation();
     const hidingRoutes = ['/register', '/login'];
 
-    const shouldHideLayout = hidingRoutes.includes(location.pathname);
+    const shouldHideLayout = hidingRoutes.includes(location.pathname); 
 
     return (
       <>
