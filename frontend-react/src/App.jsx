@@ -20,10 +20,10 @@ function AppLayout() {
     return (
       <>
         {!shouldHideLayout && <Header/>}
-        
+
           <Routes>
             <Route path='/' element={<Main/>}/>
-            <Route path='/register' element={<PublicRoute> <Register/> </PublicRoute>}/>
+            <Route path='/register' element={<PublicRoute> <Register/> </PublicRoute>}/> 
             <Route path='/login' element={<PublicRoute> <Login/> </PublicRoute>}/>
             <Route path='/dashboard' element={<PrivateRoute> <Dashboard/> </PrivateRoute>} />
             {/* Add other routes */}
