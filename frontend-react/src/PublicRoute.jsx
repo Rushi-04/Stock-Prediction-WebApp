@@ -10,5 +10,5 @@ const PublicRoute = ({children}) => {
     <Navigate to='/dashboard' />
   )
 }
-
+ 
 export default PublicRoute
