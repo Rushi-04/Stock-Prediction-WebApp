@@ -20,6 +20,7 @@ function AppLayout() {
     return (
       <>
         {!shouldHideLayout && <Header/>}
+        
           <Routes>
             <Route path='/' element={<Main/>}/>
             <Route path='/register' element={<PublicRoute> <Register/> </PublicRoute>}/>
@@ -28,7 +29,7 @@ function AppLayout() {
             {/* Add other routes */}
           </Routes>
 
-        {!shouldHideLayout && <Footer/>}
+        {!shouldHideLayout && <Footer/>} 
       </>
     );
 }
