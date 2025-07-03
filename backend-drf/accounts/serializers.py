@@ -8,11 +8,6 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = ['username', 'email', 'password']
     
-    def create(self, validated_data):
-        user = User.objects.create_user(
-            validated_data['username'],
-            validated_data['email'],
-            validated_data['password']
-        ) 
+ 
         # user = User.objects.create_user(**validated_data) #Only when we have --> fields = ['username', 'email', 'password'] i.e requierd data, not extra than this.
         return user
