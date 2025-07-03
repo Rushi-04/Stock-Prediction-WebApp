@@ -10,7 +10,7 @@ class RegisterView(generics.CreateAPIView):
     queryset = User.objects.all()
     
     
-class ProtectedView(APIView):
+class ProtectedView(APIView): 
     permission_classes = [IsAuthenticated]
     
     def get(self, request):
