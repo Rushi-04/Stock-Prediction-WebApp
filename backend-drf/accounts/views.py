@@ -17,4 +17,4 @@ class ProtectedView(APIView):
         response = {
             'status' : 'Request was permitted'
         }
-        return Response(response)
+        return Response(response)   
