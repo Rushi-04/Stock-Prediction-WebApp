@@ -14,8 +14,3 @@ class RegisterView(generics.CreateAPIView):
 class ProtectedView(APIView):
     permission_classes = [IsAuthenticated]
     
-    def get(self, request):
-        response = {
-            'status' : 'Request was permitted'
-        }
-        return Response(response)
