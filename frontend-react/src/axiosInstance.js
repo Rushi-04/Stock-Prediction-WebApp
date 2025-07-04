@@ -39,7 +39,7 @@ axiosInstance.interceptors.response.use(
                 originalRequest.headers['Authorization'] = `Bearer ${response.data.access}`;
                 return axiosInstance(originalRequest); // Retry the original request with new access token
 
-            }catch(error){   
+            }catch(error){     
                 localStorage.removeItem('accessToken');
                 localStorage.removeItem('refreshToken');
             }
