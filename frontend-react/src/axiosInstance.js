@@ -40,7 +40,7 @@ axiosInstance.interceptors.response.use(
                 return axiosInstance(originalRequest); // Retry the original request with new access token
    
             }catch(error){     
-                localStorage.removeItem('accessToken');
+                localStorage.removeItem('accessToken');  
                 localStorage.removeItem('refreshToken');     
             }       
         }         
