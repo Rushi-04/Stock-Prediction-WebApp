@@ -29,12 +29,12 @@ axiosInstance.interceptors.response.use(
     },
     //Handle failed responses    
     async function(error){  
-        const originalRequest = error.config;
+        const originalRequest = error.config; 
         if(error.response.status === 401 && !originalRequest.retry){  
-            originalRequest.retry = true;     
-            const refreshToken = localStorage.getItem('refreshToken');
+            originalRequest.retry = true;        
+            const refreshToken = localStorage.getItem('refreshToken'); 
             try{     
-                const response = await axiosInstance.post('/token/refresh/', {refresh: refreshToken})
+                const response = await axiosInstance.post('/token/refresh/', {refresh: refreshToken})  
                 localStorage.setItem('accessToken', response,data.access) 
                 originalRequest.headers['Authorization'] = `Bearer ${response.data.access}`;      
                 return axiosInstance(originalRequest); // Retry the original request with new access token
