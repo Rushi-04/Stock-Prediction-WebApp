@@ -27,7 +27,7 @@ axiosInstance.interceptors.response.use(
     function(response){  //if response is successful
         return response;
     },
-    //Handle failed responses
+    //Handle failed responses    
     async function(error){  
         const originalRequest = error.config;
         if(error.response.status === 401 && !originalRequest.retry){  
