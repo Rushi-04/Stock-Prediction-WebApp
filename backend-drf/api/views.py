@@ -104,7 +104,7 @@ class StockPredictionAPIView(APIView):
                 y_test.append(input_data[i, 0])
             
             x_test, y_test = np.array(x_test), np.array(y_test)
-            
+                
             # Making Predictions
             y_predicted = model.predict(x_test)
             
