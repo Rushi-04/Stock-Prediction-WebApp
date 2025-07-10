@@ -127,7 +127,7 @@ const Dashboard = () => {
                     d="M4 12a8 8 0 018-8v4l3-3-3-3v4a8 8 0 11-8 8z"
                   />
                 </svg>
-                Please Wait...
+                Loading ...
               </button>)
               :
               (<button
@@ -170,7 +170,7 @@ const Dashboard = () => {
       )}
       {finalPlot && (
         <div className="max-w-xl w-full bg-gray-900 bg-opacity-60 border border-gray-700 rounded-2xl shadow-xl p-6 mb-5 text-white backdrop-blur-md">
-          <h4 className="text-3xl font-bold text-center mb-4 text-blue-400">Model Evaluation</h4>
+          <h4 className="text-3xl font-semibold text-center mb-4 text-blue-400">Model Evaluation</h4>
           <ul className="space-y-3 text-lg md:text-xl">
             <li>
               <span className="text-gray-400">1. Mean Squared Error (MSE): </span>
