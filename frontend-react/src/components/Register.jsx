@@ -54,7 +54,7 @@ const Register = () => {
           transition={{ duration: 0.6 }}
         >
           <Sparkles className="h-6 w-6" />
-          Build Your Financial Future
+          Don't Guess. Predict.
         </motion.div>
       </div>
 
@@ -71,7 +71,7 @@ const Register = () => {
             Create your account
           </motion.h2>
 
-          <p className="text-center text-gray-600 mb-8">
+          <p className="text-center text-lg text-gray-600 mb-8">
             Sign up to start getting smart stock predictions.
           </p>
 

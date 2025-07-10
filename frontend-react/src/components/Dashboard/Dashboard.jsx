@@ -78,12 +78,12 @@ const Dashboard = () => {
   // {/* Background effect */}
   // <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-gray-900 to-black opacity-40 animate-pulse"></div>
 
-  // <div className="max-w-2xl mx-auto p-4 z-10"></div>
+  // <div className="max-w-2xl mx-auto p-4 z-10"></div>  from-green-500  to-blue-600   from-blue-600 to-green-500
 
   return (
     <div className="min-h-screen w-full bg-gray-950 relative flex flex-col items-center justify-center antialiased overflow-hidden px-4">
       {/* Background effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-gray-900 to-black opacity-40 animate-pulse"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-green-500 opacity-40 animate-pulse"></div>
 
       <div className="max-w-2xl mx-auto p-6 z-10">
         <h1 className="text-4xl md:text-6xl text-white text-center font-bold">
@@ -99,7 +99,7 @@ const Dashboard = () => {
             className="w-full px-4 py-3 mt-15 rounded-md bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 uppercase tracking-wide font-medium"
             onChange={(e) => setTicker(e.target.value)}
           />
-          <small>{error && <div className='text-red-500 text-center text-sm m-2 ' >{error}</div>}</small>
+          <small>{error && <div className='text-red-500 text-center font-semibold text-lg m-2 ' >{error}</div>}</small>
           {/* <button type="submit" className='bg-white  text-black text-md font-medium p-2 m-3 rounded-xl cursor-pointer text-center flex justify-center items-center hover:ring-2 hover: ring-red-500 '>See Prediction</button> */}
           <div className='flex justify-center '>
             {loading ?
