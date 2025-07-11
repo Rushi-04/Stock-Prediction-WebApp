@@ -88,7 +88,7 @@ This endpoint accepts a POST request with a JSON body containing the stock ticke
 
 It returns a JSON response with the prediction.
 
-## Model Training
+## Model Training 
 
 The stock prediction model was trained using the Jupyter notebook located in `Resources/Stock-Prediction-Model.ipynb`. The notebook contains the code for data collection, data exploration, feature engineering, and model training.
 
