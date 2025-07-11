@@ -27,7 +27,7 @@ function AppLayout() {
             
             <Route path='/login' element={<PublicRoute> <Login/> </PublicRoute>}/>
             <Route path='/dashboard' element={<PrivateRoute> <Dashboard/> </PrivateRoute>} />
-            {/* Add other routes */}
+            {/* Add other routes branch dev */}
           </Routes>
 
         {!shouldHideLayout && <Footer/>} 
