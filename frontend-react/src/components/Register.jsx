@@ -24,7 +24,7 @@ const Register = () => {
         console.log('UserData==>', userData);
         
         try{
-            const response = await axios.post("http://127.0.0.1:8000/api/v1/register/", userData)
+            const response = await axios.post("https://stock-prediction-web-app.vercel.app/api/v1/register/", userData)
             console.log("Responce.data=>",response.data)
             console.log("Registration Successfull")
             setUsername('')
