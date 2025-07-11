@@ -26,7 +26,8 @@ const Login = () => {
     // console.log('UserData==>', userData)
 
     try{
-      const response = await axios.post('http://127.0.0.1:8000/api/v1/token/', userData)
+      // const response = await axios.post('http://127.0.0.1:8000/api/v1/token/', userData)
+      const response = await axios.post('https://stock-prediction-webapp-production.up.railway.app/api/v1/token/', userData) // production
       // console.log(response.data)
       localStorage.setItem('accessToken', response.data.access)
       localStorage.setItem('refreshToken', response.data.refresh)
