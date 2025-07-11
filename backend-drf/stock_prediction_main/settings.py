@@ -132,7 +132,8 @@ STATICSTORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173'
+    'http://localhost:5173',
+    'https://stock-prediction-web-app.vercel.app'
 ]
 
 REST_FRAMEWORK = {
