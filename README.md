@@ -41,7 +41,7 @@ This is a full-stack stock prediction application with a React frontend, a Djang
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/your-username/stock-prediction-project.git
+    git clone https://github.com/Rushi-04/Stock-Prediction-WebApp.git
     cd stock-prediction-project
     ```
 
@@ -50,7 +50,7 @@ This is a full-stack stock prediction application with a React frontend, a Djang
     ```bash
     cd backend-drf
     python -m venv env
-    source env/bin/activate  # On Windows, use `env\Scripts\activate`
+    env\Scripts\activate  # On Mac, use `source env/bin/activate`
     pip install -r requirements.txt
     python manage.py migrate
     python manage.py runserver
@@ -94,7 +94,7 @@ The stock prediction model was trained using the Jupyter notebook located in `Re
 
 ## Deployment
 
-The backend is configured for deployment using Gunicorn and WhiteNoise. The `Procfile` and `nixpacks.toml` files are included for easy deployment to platforms like Heroku or Railway.
+The backend is configured for deployment using Gunicorn and WhiteNoise. The `Procfile` and `nixpacks.toml` files are included for easy deployment to Railway.
 
 ## Contributing
 
