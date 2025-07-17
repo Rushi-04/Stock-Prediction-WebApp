@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Brain, TrendingUp, Shield, Users, ChevronRight, Sparkles } from 'lucide-react'
+import { Brain, TrendingUp, Shield, Users, Sparkles } from 'lucide-react'
 import Button from './Button'
 
 const scrollVariant = {
@@ -13,12 +13,8 @@ const scrollVariant = {
 }
 
 const Main = () => {
-
   return (
     <div className="relative bg-white overflow-hidden">
-      {/* Light/Dark toggle - place somewhere else in App ideally */}
-
-      {/* Hero Section */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -30,7 +26,7 @@ const Main = () => {
             transition={{ duration: 0.4 }}
             className="inline-flex items-center bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-medium"
           >
-            <Sparkles className="h-4 w-4 mr-2" /> Powered by Advanced AI
+            <Sparkles className="h-4 w-4 mr-2" /> Powered by AI
           </motion.div>
 
           {/* Title */}
@@ -40,9 +36,9 @@ const Main = () => {
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-6xl font-bold text-gray-900"
           >
-            Smart Investing Made
+            Predict Stocks With
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600">
-              {' '}Simple
+              {' '}AI Precision
             </span>
           </motion.h1>
 
@@ -53,8 +49,7 @@ const Main = () => {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-lg text-gray-900 max-w-3xl mx-auto"
           >
-            Get AI-powered investment recommendations tailored for beginners.
-            Our advanced algorithms analyze thousands of data points to help you make informed stock decisions.
+            Leverage deep learning to forecast stock trends. Our AI model uses historical data of stocks and analyzes it using neural networks to deliver daily predictions and insights — ideal for new and curious investors.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -65,12 +60,12 @@ const Main = () => {
             className="flex flex-col sm:flex-row justify-center gap-4"
           >
             <Button
-              text="Start Investing Smart"
+              text="Get Started"
               styler="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-medium"
-            /> 
+            />
             <Button
               text="Go to Dashboard"
-              styler="border border-gray-300 hover:bg-gray-100 px-8 py-3 rounded-full font-medium"
+              styler="border border-gray-300  hover:bg-gray-100 px-8 py-3 rounded-full font-medium"
               url='/dashboard'
             />
           </motion.div>
@@ -79,16 +74,16 @@ const Main = () => {
         {/* Features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24">
           {[{
-            title: 'AI-Powered Analysis',
-            desc: 'Advanced machine learning analyzes market trends, company financials, and economic indicators.',
+            title: 'AI - Forecasting',
+            desc: 'Uses neural networks to identify trends and make next-day stock predictions.',
             icon: <Brain className="h-6 w-6 text-blue-600" />, bg: 'bg-blue-100'
           }, {
-            title: 'Beginner-Friendly',
-            desc: 'No finance background needed. Clear explanations and guidance for every decision.',
+            title: 'Clean, Beginner UI',
+            desc: 'Built with a focus on simplicity. No finance background required — just insights you can understand.',
             icon: <Shield className="h-6 w-6 text-green-600" />, bg: 'bg-green-100'
           }, {
-            title: 'Risk-Free Learning',
-            desc: 'Practice with demo portfolios and track hypothetical investments risk-free.',
+            title: 'Real Market Data',
+            desc: 'Uses real time data to ensure accurate and up-to-date stock price data for predictions.',
             icon: <TrendingUp className="h-6 w-6 text-purple-600" />, bg: 'bg-purple-100'
           }].map((feature, i) => (
             <motion.div
@@ -117,22 +112,14 @@ const Main = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-20 text-center space-y-3"
         >
-          <p className="text-md text-gray-600">Trusted by thousands of new Investors</p>
+          <p className="text-md text-gray-600">Helping new investors unlock market potential</p>
           <div className="flex justify-center items-center gap-2">
             <Users className="h-5 w-5 text-gray-400" />
-            <span className="text-2xl font-bold text-gray-900">12,847</span>
-            <span className="text-gray-600">users started investing smarter this month</span>
+            <span className="text-2xl font-bold text-gray-900">1,100+</span>
+            <span className="text-gray-600">users predicted stocks with our model</span>
           </div>
         </motion.div>
       </div>
-
-      {/* Scroll to Top Button */}
-      {/* <button
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-5 right-5 bg-black text-white px-4 py-2 rounded-full shadow-lg hover:bg-gray-800 transition-all"
-      >
-        Top
-      </button> */}
     </div>
   );
 };
